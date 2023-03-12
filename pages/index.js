@@ -3,6 +3,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 export default function Home() {
+  const daysUntilWedding = () => {
+    const today = new Date()
+    const weddingDate = new Date("09/02/2023")
+    const timeDiff = weddingDate.getTime() - today.getTime()
+    return Math.ceil(timeDiff / (1000 * 3600 * 24))
+  }
+
   return (
     <>
       <Head>
@@ -13,6 +20,28 @@ export default function Home() {
       </Head>
       <main>
         <Navbar/>
+        <div className="container mx-auto px-8">
+          <div className="flex justify-around items-center">
+            <div className="flex flex-col justify-around items-center px-4 lg:px-0 lg:w-1/2 h-[90vh] lg:h-[75vh]">
+              <div className="flex flex-col justify-center items-center space-y-8 px-12">
+                <p className="p1 text-center">We’re getting married! And we are so excited for you to celebrate with us, in just <strong>{daysUntilWedding()} days!</strong></p>
+                <hr className="w-16 border-moss-300 border-t-2 border-b-2 rounded"/>
+                <p className="p1 text-center">¡Nos vamos a casar! Con muchísima emoción, te esperamos en <strong>{daysUntilWedding()} días!</strong></p>
+              </div>
+              <div className="flex flex-col justify-around items-center">
+                <div className="flex flex-col justify-center items-center">
+                  <img src="plant.svg" />
+                  <h2 className='text-center font-serif'>San Antonio, TX</h2>
+                  <p className='text-center p1'>Septembet 1-2, 2023</p>
+                </div>
+                <button className="mt-8 primary font-serif">RSVP</button>
+              </div>
+            </div>
+            <div className=" hidden lg:flex flex-col justify-center items-center w-1/2 h-[75vh]"> 
+              <img src="/index-main.png"/>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   )

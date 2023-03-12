@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {background-color: #F1F1EF}
+
+h2 {
+  font-weight:300;
+  font-size: 3rem;
+  color: theme(colors.indigo.600);
+}
+
+.p1 {
+  font-weight:400;
+  font-size: 1.5rem;
+  color: theme(colors.indigo.600);
+}
+
+button.primary {
+  color: white;
+  background-color: theme(colors.moss.400);
+  padding: 1.3rem 8rem;
+  border-radius: 4px;
+  font-size: 3rem;
+  font-weight:300;
+}
