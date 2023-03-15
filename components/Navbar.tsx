@@ -40,7 +40,7 @@ export default function Navbar() {
 
     return (
         <>
-        <div className="container mx-auto bg-transparent border-b-2 border-t-2 mt-2 lg:my-8 border-sky-300">
+        <div className="container mx-auto bg-transparent border-b-2 border-t-2 mt-2 lg:mt-4 lg:mb-8 border-sky-300">
             <div className="container flex items-center justify-between px-4">
                 <div className="flex items-center justify-between py-4">
                     <img

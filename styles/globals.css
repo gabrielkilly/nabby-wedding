@@ -6,13 +6,13 @@ html {background-color: #F1F1EF}
 
 h2 {
   font-weight:300;
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: theme(colors.indigo.600);
 }
 
 .p1 {
   font-weight:400;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: theme(colors.indigo.600);
 }
 

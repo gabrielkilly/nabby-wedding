@@ -21,8 +21,8 @@ export default function Home() {
       <main>
         <Navbar/>
         <div className="container mx-auto px-8">
-          <div className="flex justify-around items-center">
-            <div className="flex flex-col justify-start lg:justify-around items-center py-4 lg:py0 px-4 lg:px-0 lg:w-1/2 h-full lg:h-[75vh]">
+          <div className="flex justify-between items-center">
+            <div className="flex flex-col justify-start lg:justify-around items-center py-12 lg:py-0 px-4 lg:px-0 lg:w-1/2 h-full lg:h-[75vh]">
               <div className="flex flex-col justify-center items-center space-y-8 px-12">
                 <p className="p1 text-center">We’re getting married! And we are so excited for you to celebrate with us, in just <strong>{daysUntilWedding()} days!</strong></p>
                 <hr className="w-16 border-moss-300 border-t-2 border-b-2 rounded"/>
@@ -36,10 +36,8 @@ export default function Home() {
                 </div>
                 <button className="mt-8 primary font-serif">RSVP</button>
               </div>
-            </div>
-            <div className=" hidden lg:flex flex-col justify-center items-center w-1/2 h-[75vh]"> 
-              <img src="/index-main.png"/>
-            </div>
+            </div>``
+            <div className=" hidden lg:flex flex-col justify-center items-center w-1/2 h-[75vh] bg-[url('/index-main.png')] bg-contain bg-no-repeat bg-center"/> 
           </div>
         </div>
       </main>
