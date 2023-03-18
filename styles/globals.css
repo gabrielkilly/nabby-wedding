@@ -2,12 +2,220 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-Black.otf") format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-BlackItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-Book.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-BookItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+  
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-Light.otf") format("opentype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-LightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-MediumSemibold.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-SemiboldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-Thin.otf") format("opentype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-ThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-Ultra.otf") format("opentype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Ringside";
+  src: url("/fonts/RingsideRegular-UltraItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/RingsideRegular-Black-Pro.otf") format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/RingsideRegular-BlackItalic-Pro.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-Bold-Pro.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-BoldItalic-Pro.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-Book-Pro.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-BookItalic-Pro.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-Light-Pro.otf") format("opentype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-LightItalic-Pro.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-Medium-Pro.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-MediumItalic-Pro.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-Semibold-Pro.otf") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Sentinel";
+  src: url("/fonts/Sentinel-SemiboldItalic-Pro.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
 html {background-color: #F1F1EF}
 
 h2 {
   font-weight:300;
   font-size: 2.8rem;
   color: theme(colors.indigo.600);
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 2rem;
+  color: theme(colors.indigo.600);
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: theme(colors.indigo.600);
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: theme(colors.indigo.600);
+}
+
+h4.small {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: theme(colors.indigo.600);
+  font-family: "Sentinel"
 }
 
 .p1 {
@@ -19,7 +227,7 @@ h2 {
 button.primary {
   color: white;
   background-color: theme(colors.moss.400);
-  padding: 1.3rem 7rem;
+  padding: .5rem 3rem;
   border-radius: 4px;
   font-size: 3rem;
   font-weight:300;

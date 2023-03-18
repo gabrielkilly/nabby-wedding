@@ -12,16 +12,17 @@ export default function Navbar() {
             url: "/schedule"
         },
         {
-            name: "RSVP",
-            url: "/rsvp"
-        },
-        {
             name: "TRAVEL/HOTELS",
             url: "/travel"
         },
         {
             name: "REGISTRY",
             url: "/registry"
+        },
+        {
+            name: "RSVP",
+            url: "/rsvp",
+            isCta: true
         }
     ]
 
@@ -30,7 +31,14 @@ export default function Navbar() {
             <nav className="bg-cover">
                 <ul className="flex flex-col justify-center items-center">
                     { navItems.map(item => 
-                        <li key={item.name} className="w-full font-extrabold text-xl text-indigo-500 py-4 px-8 border-t-2 border-sky-300"><a href={item.url}>{item.name}</a></li>
+                        {
+                            if (item.isCta) {
+                                return <li key={item.name} className="w-full font-extrabold text-xl text-indigo-500 py-4 px-8 border-t-2 border-sky-300 bg-[#D8DCD0]"><a href={item.url}>{item.name}</a></li>
+                            } else {
+                                return <li key={item.name} className="w-full font-extrabold text-xl text-indigo-500 py-4 px-8 border-t-2 border-sky-300"><a href={item.url}>{item.name}</a></li>
+                            }
+                    
+                        }
                     ) }
                 </ul>
             </nav>
@@ -40,19 +48,25 @@ export default function Navbar() {
 
     return (
         <>
-        <div className="container mx-auto bg-transparent border-b-2 border-t-2 mt-2 lg:mt-4 lg:mb-8 border-sky-300">
-            <div className="container flex items-center justify-between px-4">
+        <div className="flex-initial w-100 bg-white border-b-2 border-sky-300">
+            <div className="px-8 lg:px-16 flex items-center justify-between">
                 <div className="flex items-center justify-between py-4">
                     <img
                         src="/wedding-icon.svg"
                         alt="Gabby & Nayeli Wedding Logo"
                     />
-                    <h1 className="font-bold text-xl sm:text-3xl text-indigo-500 ml-4">GABBY & NAYELI</h1>
+                    <h3 className="ml-4 hidden lg:block">GABBY & NAYELI</h3>
                 </div>
                 <nav>
                     <ul className="flex items-center justify-between py-4 space-x-8 hidden lg:flex">
                         { navItems.map(item => 
-                            <li key={item.name} className="font-extrabold text-xl text-indigo-500"><a href={item.url}>{item.name}</a></li>
+                            {
+                                if (item.isCta) {
+                                    return <li key={item.name} className="font-extrabold text-xl bg-moss-400 py-2 px-8 rounded"><a href={item.url}><h5 className="text-white">{item.name}</h5></a></li>
+                                } else {
+                                    return <li key={item.name} className="font-extrabold text-xl text-indigo-500"><a href={item.url}><h5>{item.name}</h5></a></li>
+                                }
+                            }
                         ) }
                     </ul>
                     <img src={navIcon} className="lg:hidden w-6" onClick={() => setShowMobileMenu(!showShowMobileMenu)}></img>

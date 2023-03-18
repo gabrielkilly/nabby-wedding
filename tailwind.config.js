@@ -9,6 +9,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      'white': "#FFFFFF",
       'neutral': {
         1: "F9F6F0",
         2: "F8F8F8",
@@ -57,6 +58,10 @@ module.exports = {
         600: '#231D52',
       },
     },
+    fontFamily: {
+      sans: ["Ringside"],
+      serif: ["Sentinel"]
+    }
   },
   plugins: [],
 }
