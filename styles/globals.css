@@ -188,9 +188,10 @@
 html {background-color: #F1F1EF}
 
 h2 {
-  font-weight:300;
-  font-size: 2.8rem;
-  color: theme(colors.indigo.600);
+  font-weight:500;
+  font-size: 2.275rem;
+  color: theme(colors.gray.600);
+  font-family: "Sentinel"
 }
 
 h3 {

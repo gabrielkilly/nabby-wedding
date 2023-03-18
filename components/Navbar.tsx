@@ -1,41 +1,47 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
+export const NavItems = {
+    itinerary: {
+        name: "ITINERARY",
+        url: "/itinerary",
+        isCta: false
+    },
+    travel: {
+        name: "TRAVEL/HOTELS",
+        url: "/travel",
+        isCta: false
+    },
+    registry: {
+        name: "REGISTRY",
+        url: "/registry",
+        isCta: false
+    },
+    rsvp: {
+        name: "RSVP",
+        url: "/rsvp",
+        isCta: true
+    }
+}
 
-export default function Navbar() {
-
+interface NavbarProps {
+    tabname?: string
+}
+export default function Navbar({tabname}: NavbarProps) {
     const [showShowMobileMenu, setShowMobileMenu]= useState(false);
-
-    const navItems = [
-        {
-            name: "SCHEDULE",
-            url: "/schedule"
-        },
-        {
-            name: "TRAVEL/HOTELS",
-            url: "/travel"
-        },
-        {
-            name: "REGISTRY",
-            url: "/registry"
-        },
-        {
-            name: "RSVP",
-            url: "/rsvp",
-            isCta: true
-        }
-    ]
 
     const mobileNavSection = showShowMobileMenu ? 
        (
             <nav className="bg-cover">
                 <ul className="flex flex-col justify-center items-center">
-                    { navItems.map(item => 
+                    { Object.values(NavItems).map(item => 
                         {
+                            const activeStyling = (item.name == tabname) ? "bg-moss-100 text-moss-600" : ""
+
                             if (item.isCta) {
                                 return <li key={item.name} className="w-full font-extrabold text-xl text-indigo-500 py-4 px-8 border-t-2 border-sky-300 bg-[#D8DCD0]"><a href={item.url}>{item.name}</a></li>
                             } else {
-                                return <li key={item.name} className="w-full font-extrabold text-xl text-indigo-500 py-4 px-8 border-t-2 border-sky-300"><a href={item.url}>{item.name}</a></li>
+                                return <li key={item.name} className={`w-full font-extrabold text-xl text-indigo-500 py-4 px-8 border-t-2 border-sky-300 ${activeStyling}`}><a href={item.url}>{item.name}</a></li>
                             }
                     
                         }
@@ -51,20 +57,25 @@ export default function Navbar() {
         <div className="flex-initial w-100 bg-white border-b-2 border-sky-300">
             <div className="px-8 lg:px-16 flex items-center justify-between">
                 <div className="flex items-center justify-between py-4">
-                    <img
+                    <a href="/"><img
                         src="/wedding-icon.svg"
                         alt="Gabby & Nayeli Wedding Logo"
-                    />
-                    <h3 className="ml-4 hidden lg:block">GABBY & NAYELI</h3>
+                    /></a>
+                    <a href="/"><h3 className="ml-4 hidden lg:block">GABBY & NAYELI</h3></a>
                 </div>
                 <nav>
                     <ul className="flex items-center justify-between py-4 space-x-8 hidden lg:flex">
-                        { navItems.map(item => 
+                        { Object.values(NavItems).map(item => 
                             {
+                                console.log(item.name, tabname)
+                                console.log(item.name === tabname)
                                 if (item.isCta) {
-                                    return <li key={item.name} className="font-extrabold text-xl bg-moss-400 py-2 px-8 rounded"><a href={item.url}><h5 className="text-white">{item.name}</h5></a></li>
-                                } else {
-                                    return <li key={item.name} className="font-extrabold text-xl text-indigo-500"><a href={item.url}><h5>{item.name}</h5></a></li>
+                                    return <li key={item.name} className="bg-moss-400 py-2 px-8 rounded"><a href={item.url}><h5 className="text-white">{item.name}</h5></a></li>
+                                } else if(item.name === tabname) {
+                                    return <li key={item.name} className="bg-moss-100 py-1 px-2 rounded"><a href={item.url}><h5 className="text-moss-600">{item.name}</h5></a></li>
+                                }
+                                else {
+                                    return <li key={item.name}><a href={item.url}><h5>{item.name}</h5></a></li>
                                 }
                             }
                         ) }

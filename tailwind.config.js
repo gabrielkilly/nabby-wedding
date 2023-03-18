@@ -57,6 +57,10 @@ module.exports = {
         500: '#3D3672',
         600: '#231D52',
       },
+      'gray': {
+        600: '#3F3F3F',
+        800: '#222324',
+      },
     },
     fontFamily: {
       sans: ["Ringside"],

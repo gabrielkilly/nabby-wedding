@@ -1,6 +1,6 @@
+import React from 'react'
 import Navbar from '@/components/Navbar'
 import Head from 'next/head'
-import Image from 'next/image'
 
 export default function Home() {
   const daysUntilWedding = () => {
@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main>
         <div className='flex flex-col lg:h-[100vh]'>
-          <Navbar/>
+        <Navbar />
           <div className="flex-auto">
             <div className="flex h-full lg:w-[1/2]">
               <div className="flex flex-col justify-evenly lg:justify-center gap-8 lg:gap-16 xl:gap-32 items-center lg:w-1/2">
