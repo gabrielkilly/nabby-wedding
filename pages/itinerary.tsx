@@ -4,13 +4,34 @@ import Head from 'next/head'
 
 const sections: ItinerarySectionProps[] = [
   {
-    title: "ICEBREAKER / ROMPEHELIOS",
+    enTitle: "ICEBREAKER",
+    esTitle: "ROMPEHELIOS",
     date: "Friday, Semptember 1, 2023",
     timeRange: "~6:00pm - 10:00pm",
     location: "Location to be determined",
-    color: "gold-200",
+    color: "bg-gold-200",
     mapUrl: "https://maps.google.com",
-    iconPath: "/menu.svg"
+    iconPath: "/itinerary/icebreaker-icon.svg"
+  },
+  {
+    enTitle: "CEREMONY",
+    esTitle: "CEREMONIA",
+    date: "Saturday, Semptember 2, 2023",
+    timeRange: "4:00pm",
+    location: "Immaculate Conception Chapel at the Oblate School",
+    color: "bg-[#D8DCD0]",
+    mapUrl: "https://maps.google.com",
+    iconPath: "/itinerary/ceremony-icon.svg"
+  },
+  {
+    enTitle: "RECEPTION",
+    esTitle: "RECEPCIÓN",
+    date: "Saturday, Semptember 2, 2023",
+    timeRange: "6:00pm",
+    location: "McNay Art Museum",
+    color: "bg-[#D8E5ED]",
+    mapUrl: "https://maps.google.com",
+    iconPath: "/itinerary/reception-icon.svg"
   }
 ]
 
@@ -37,16 +58,16 @@ export default function Itinerary() {
 }
 
 interface ItinerarySectionProps {
-  title: string, date: string, timeRange: string, location: string, color: string, mapUrl: string, iconPath: string
+  enTitle: string, esTitle: string, date: string, timeRange: string, location: string, color: string, mapUrl: string, iconPath: string
 }
 
-const ItinerarySection = ({title, date, timeRange, location, color, mapUrl, iconPath}: ItinerarySectionProps) => {
+const ItinerarySection = ({enTitle, esTitle, date, timeRange, location, color, mapUrl, iconPath}: ItinerarySectionProps) => {
     return (
-      <div className={`flex flex-col justify-center items-center w-full bg-${color}`}>
-        <h5><img className="inline" src={iconPath}/>{title}</h5>
-        <h4 className='small'>{date}</h4>
-        <p><p className='p2 gray-800'>{timeRange}</p> <p className='p2'>| {location}</p></p>
-        <a href={mapUrl} target="_blank"><button>VIEW MAP</button></a>
+      <div className={`flex flex-col ${color} justify-center items-center mt-8 py-8 w-[95%]`}>
+        <h5 className='text-gray-800'><img className="inline mr-3" src={iconPath}/>{enTitle} <span className='italic'>/ {esTitle}</span></h5>
+        <h4 className='small mt-8 text-gray-800'>{date}</h4>
+        <p className='p2 mt-2'><span className='text-gray-800'>{timeRange}</span> <span className='mx-3'>|</span><span className='text-gray-600'>{location}</span></p>
+        <a href={mapUrl} target="_blank"><button className='secondary mt-8'>VIEW MAP</button></a>
       </div>
     )
   }
