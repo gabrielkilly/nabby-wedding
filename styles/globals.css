@@ -69,7 +69,7 @@
 
 @font-face {
   font-family: "Ringside";
-  src: url("/fonts/RingsideRegular-MediumSemibold.otf") format("opentype");
+  src: url("/fonts/RingsideRegular-Semibold.otf") format("opentype");
   font-weight: 600;
 }
 
@@ -222,6 +222,22 @@ h4.small {
   font-weight:400;
   font-size: 1.35rem;
   color: theme(colors.indigo.600);
+}
+
+.p3 {
+  font-family: 'Sentinel';
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 140%;
+}
+
+.link {
+  font-family: 'Sentinel';
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 140%;
+  text-decoration-line: underline;
+  color: theme(colors.sky.500);
 }
 
 button.primary {
