@@ -61,7 +61,7 @@ export default function Navbar({tabname}: NavbarProps) {
                         src="/wedding-icon.svg"
                         alt="Gabby & Nayeli Wedding Logo"
                     /></Link>
-                    <a href="/"><h3 className="ml-4 hidden lg:block">GABBY & NAYELI</h3></a>
+                    <Link href="/"><h3 className="ml-4 hidden lg:block">GABBY & NAYELI</h3></Link>
                 </div>
                 <nav>
                     <ul className="flex items-center justify-between py-4 space-x-8 hidden lg:flex">
