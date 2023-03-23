@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar, { NavItems } from '@/components/Navbar'
+import Navbar, { NavItems } from '../components/Navbar'
 import Head from 'next/head'
 
 export default function Registry() {

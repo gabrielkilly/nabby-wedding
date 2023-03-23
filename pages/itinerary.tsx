@@ -1,6 +1,22 @@
 import React from 'react'
-import Navbar, { NavItems } from '@/components/Navbar'
+import Navbar, { NavItems } from '../components/Navbar'
 import Head from 'next/head'
+
+interface IteneraryMeetingPoint {
+  timeRange: string,
+  location: string, 
+  address: string, 
+  mapUrl: string
+}
+
+interface ItinerarySectionProps {
+  enTitle: string, 
+  esTitle: string, 
+  date: string, 
+  meetingPoints: IteneraryMeetingPoint[]
+  color: string, 
+  iconPath: string
+}
 
 const itnSections: ItinerarySectionProps[] = [
   {
@@ -56,43 +72,10 @@ const itnSections: ItinerarySectionProps[] = [
   }
 ]
 
-interface IteneraryMeetingPoint {
-  timeRange: string,
-  location: string, 
-  address: string, 
-  mapUrl: string
-}
-
-interface ItinerarySectionProps {
-  enTitle: string, 
-  esTitle: string, 
-  date: string, 
-  meetingPoints: IteneraryMeetingPoint[]
-  color: string, 
-  iconPath: string
-}
-
-const ItinerarySection = ({enTitle, esTitle, date, meetingPoints, color, iconPath}: ItinerarySectionProps) => {
-    return (
-      <div className={`flex flex-col ${color} justify-center items-center mt-8 py-8 w-full lg:w-[95%]`}>
-        <h5 className='text-gray-800'><img className="inline mr-3" src={iconPath}/>{enTitle} <span className='italic'>/ {esTitle}</span></h5>
-        <h4 className='small mt-8 text-gray-800'>{date}</h4>
-        <>{meetingPoints.map(point => MeetingPoint(point))}</>
-      </div>
-    )
-  }
-
-const MeetingPoint = (point: IteneraryMeetingPoint) => {
-  const {timeRange, location, address, mapUrl} = point
-            return (
-              <div className='flex flex-col justify-center items-center my-3'>
-                <p className='p2 mt-2'><span className='text-gray-800'>{timeRange}</span> <span className='mx-3'>|</span><span className='text-gray-600'>{location}</span></p>
-                <div className='flex flex-col lg:flex-row justify-center items-center'>
-                  <p className='p3 mt-2'>{address}</p>
-                  <a href={mapUrl} target="_blank" className='ml-2 link'>View Map</a>
-                </div>
-              </div>
-            )
+interface DressCodeSectionProps {
+  title: string, 
+  label: string, 
+  description: string
 }
 
 const dressCodeSections: DressCodeSectionProps[] = [
@@ -107,20 +90,6 @@ const dressCodeSections: DressCodeSectionProps[] = [
     description: "Long dresses and suits. "
   }
 ]
-interface DressCodeSectionProps {
-  title: string, 
-  label: string, 
-  description: string
-}
-
-const DressCodeSection = ({title, label, description}: DressCodeSectionProps) =>
-  <div className='flex flex-col justify-center items-center my-4'>
-    <h5>{title}</h5>
-    <div className='flex flex-col lg:flex-row justify-center items-center my-4'>
-      <p><strong>{label}</strong></p>
-      <p>{description}</p>
-    </div>
-  </div>
 
 export default function Itinerary() {
   return (
@@ -148,4 +117,36 @@ export default function Itinerary() {
     </>
   )
 }
+
+const ItinerarySection = ({enTitle, esTitle, date, meetingPoints, color, iconPath}: ItinerarySectionProps) => {
+  return (
+    <div className={`flex flex-col ${color} justify-center items-center mt-8 py-8 w-full lg:w-[95%]`}>
+      <h5 className='text-gray-800'><img className="inline mr-3" src={iconPath}/>{enTitle} <span className='italic'>/ {esTitle}</span></h5>
+      <h4 className='small mt-8 text-gray-800'>{date}</h4>
+      <>{meetingPoints.map(point => MeetingPoint(point))}</>
+    </div>
+  )
+}  
+
+const MeetingPoint = (point: IteneraryMeetingPoint) => {
+const {timeRange, location, address, mapUrl} = point
+          return (
+            <div className='flex flex-col justify-center items-center my-3'>
+              <p className='p2 mt-2'><span className='text-gray-800'>{timeRange}</span> <span className='mx-3'>|</span><span className='text-gray-600'>{location}</span></p>
+              <div className='flex flex-col lg:flex-row justify-center items-center'>
+                <p className='p3 mt-2'>{address}</p>
+                <a href={mapUrl} target="_blank" className='ml-2 link'>View Map</a>
+              </div>
+            </div>
+          )
+}
+
+const DressCodeSection = ({title, label, description}: DressCodeSectionProps) =>
+  <div className='flex flex-col justify-center items-center my-4'>
+    <h5>{title}</h5>
+    <div className='flex flex-col lg:flex-row justify-center items-center my-4'>
+      <p><strong>{label}</strong></p>
+      <p>{description}</p>
+    </div>
+  </div>
 
