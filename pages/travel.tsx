@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar, { NavItems } from '../components/Navbar'
 import Head from 'next/head'
+import Link from 'next/link'
 
 interface TravelSectionProps {
   enTitle: string
@@ -98,7 +99,7 @@ const HotelSection = ({title, address, phone, ctaUrl}: HotelSectionProps) => {
       <h4 className='small'>{title}</h4>
       <p>{address}</p>
       <p>{phone}</p>
-      <button className="w-max border-2 border-indigo-500 bg-[#EDECF2] text-indigo-500 px-4 py-2 mt-2" ><a href={ctaUrl}>View Rooms</a></button>
+      <Link href={ctaUrl} className="w-max border-2 border-indigo-500 bg-[#EDECF2] text-indigo-500 px-4 py-2 mt-2">View Rooms</Link>
     </div>
   )
 }

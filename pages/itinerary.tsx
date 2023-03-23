@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar, { NavItems } from '../components/Navbar'
 import Head from 'next/head'
+import Link from 'next/link'
 
 interface IteneraryMeetingPoint {
   timeRange: string,
@@ -135,7 +136,7 @@ const {timeRange, location, address, mapUrl} = point
               <p className='p2 mt-2'><span className='text-gray-800'>{timeRange}</span> <span className='mx-3'>|</span><span className='text-gray-600'>{location}</span></p>
               <div className='flex flex-col lg:flex-row justify-center items-center'>
                 <p className='p3 mt-2'>{address}</p>
-                <a href={mapUrl} target="_blank" className='ml-2 link'>View Map</a>
+                <Link href={mapUrl} target="_blank" className='ml-2 link'>View Map</Link>
               </div>
             </div>
           )
