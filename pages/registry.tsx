@@ -13,6 +13,9 @@ export default function Registry() {
       </Head>
       <main>
           <Navbar tabname={NavItems.registry.name} />
+          <div className='flex w-[100vw] h-[100vh] justify-center items-center'>
+            <h2>Coming Soon</h2>
+          </div>
       </main>
     </>
   )

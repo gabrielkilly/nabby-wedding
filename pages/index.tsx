@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar, {NavItems} from '../components/Navbar'
 import Head from 'next/head'
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
                     <h3 className='text-center'>San Antonio, TX</h3>
                     <h4 className='small text-center p1'>September 1-2, 2023</h4>
                   </div>
-                  <button className="mt-8 primary"><h4 className="text-white">RSVP</h4></button>
+                  <a href={NavItems.rsvp.url}><button className="mt-8 primary"><h4 className="text-white">RSVP</h4></button></a>
                 </div>
               </div>
               <div className=" hidden lg:flex flex-col justify-center items-center w-1/2 bg-[url('/index-main.png')] bg-cover bg-no-repeat bg-top"/> 
