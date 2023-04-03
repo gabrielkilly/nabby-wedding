@@ -13,10 +13,9 @@ export default function Registry() {
       </Head>
       <main>
           <Navbar tabname={NavItems.registry.name} />
-          <div className='flex flex-col justify-center px-16 gap-y-8 w-full'>
+          <div className='flex flex-col justify-center px-8 lg:px-16 gap-y-8 w-full'>
             <h2 className='mt-8'>Registry</h2>
-            <p>Most of all, we’re excited to celebrate with you! If you’re able to and would like to gift us anything, you can contribute to our Honeymoon and Homegoods fund below!</p>
-            <p className='italic'>!Lo que mas nos emociona es poder celebrar contigo! Pero si nos quieres dejar un detalle, puedes contribuír a nuestro fondo de luna de miel o nuestro fondo de artículos para nuestro hogar.</p>
+            <p className='text-lg'>This page will be completed in the coming weeks. Give us your email when you RSVP and we will notify you when the page is ready.</p>
           </div>
       </main>
     </>

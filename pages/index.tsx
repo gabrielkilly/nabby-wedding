@@ -26,12 +26,12 @@ export default function Home() {
               <div className="flex flex-col justify-evenly lg:justify-center gap-8 lg:gap-16 2xl:gap-32 items-center lg:w-1/2">
                 <div className="block lg:hidden w-full h-52 md:h-96 bg-[url('/index-main.png')] bg-cover bg-no-repeat bg-top"/> 
                 <div className="flex flex-col max-w-xl px-4 text-center justify-center items-center space-y-8">
-                  <h4 className="lg:hidden text-center">GABBY & NAYELI</h4>
+                  <h2 className="lg:hidden text-center text-indigo-600">Gabby & Nayeli</h2>
                   <p className="p1 text-center">We’re getting married! And we are so excited for you to celebrate with us, in just <strong>{daysUntilWedding()} days!</strong></p>
                   <hr className="w-20 border-moss-300 border-t-1 border-b-2 rounded"/>
                   <p className="p1 text-center italic">¡Nos vamos a casar! Con muchísima emoción, te esperamos en <strong>{daysUntilWedding()} días!</strong></p>
                 </div>
-                <div className="flex flex-col justify-around items-center bg-[#D8DCD0] rounded py-8 px-12 lg:py-16 lg:px-28 mb-4 lg:mb-8 ">
+                <div className="flex flex-col justify-around items-center bg-[#D8DCD0] rounded py-8 px-12 lg:py-16 lg:px-28 mx-4 lg:mx-0 mb-4 lg:mb-8 ">
                   <div className="flex flex-col justify-center items-center">
                     <img src="plant.svg" />
                     <h3 className='text-center'>San Antonio, TX</h3>

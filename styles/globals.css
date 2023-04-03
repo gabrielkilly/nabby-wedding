@@ -162,7 +162,6 @@
   font-family: "Sentinel";
   src: url("/fonts/Sentinel-Medium-Pro.otf") format("opentype");
   font-weight: 500;
-  font-style: italic;
 }
 
 @font-face {
@@ -189,7 +188,7 @@ html {background-color: #F1F1EF}
 
 h2 {
   font-weight:500;
-  font-size: 2.275rem;
+  font-size: 2.375rem;
   color: theme(colors.gray.600);
   font-family: "Sentinel";
 }
@@ -234,7 +233,7 @@ h4.small {
 .link {
   font-family: 'Sentinel';
   font-weight: 600;
-  font-size: 1rem;
+  font-size: .9rem;
   line-height: 140%;
   text-decoration-line: underline;
   color: theme(colors.sky.500);
