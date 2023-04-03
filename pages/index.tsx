@@ -23,21 +23,23 @@ export default function Home() {
         <Navbar />
           <div className="flex-auto">
             <div className="flex h-full lg:w-[1/2]">
-              <div className="flex flex-col justify-evenly lg:justify-center gap-8 lg:gap-16 xl:gap-32 items-center lg:w-1/2">
+              <div className="flex flex-col justify-evenly lg:justify-center gap-8 lg:gap-16 2xl:gap-32 items-center lg:w-1/2">
                 <div className="block lg:hidden w-full h-52 md:h-96 bg-[url('/index-main.png')] bg-cover bg-no-repeat bg-top"/> 
                 <div className="flex flex-col max-w-xl px-4 text-center justify-center items-center space-y-8">
                   <h4 className="lg:hidden text-center">GABBY & NAYELI</h4>
                   <p className="p1 text-center">We’re getting married! And we are so excited for you to celebrate with us, in just <strong>{daysUntilWedding()} days!</strong></p>
                   <hr className="w-20 border-moss-300 border-t-1 border-b-2 rounded"/>
-                  <p className="p1 text-center">¡Nos vamos a casar! Con muchísima emoción, te esperamos en <strong>{daysUntilWedding()} días!</strong></p>
+                  <p className="p1 text-center italic">¡Nos vamos a casar! Con muchísima emoción, te esperamos en <strong>{daysUntilWedding()} días!</strong></p>
                 </div>
-                <div className="flex flex-col justify-around items-center bg-[#D8DCD0] rounded py-8 px-12 lg:py-16 lg:px-28 mb-4 lg:mb-0 ">
+                <div className="flex flex-col justify-around items-center bg-[#D8DCD0] rounded py-8 px-12 lg:py-16 lg:px-28 mb-4 lg:mb-8 ">
                   <div className="flex flex-col justify-center items-center">
                     <img src="plant.svg" />
                     <h3 className='text-center'>San Antonio, TX</h3>
                     <h4 className='small text-center p1'>September 1-2, 2023</h4>
                   </div>
                   <a href={NavItems.rsvp.url}><button className="mt-8 primary"><h4 className="text-white">RSVP</h4></button></a>
+                  <p className='text-gray-700 p3 mt-4 mb-1 lg:mb-0'>Please RSVP by July 15, 2023</p>
+                  <p className='text-gray-700 italic p3 text-center'>Favor de confirmar antes del 15 de julio 2023</p>
                 </div>
               </div>
               <div className=" hidden lg:flex flex-col justify-center items-center w-1/2 bg-[url('/index-main.png')] bg-cover bg-no-repeat bg-top"/> 

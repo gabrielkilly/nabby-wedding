@@ -5,7 +5,8 @@ import Link from 'next/link'
 
 interface IteneraryMeetingPoint {
   timeRange: string,
-  location: string, 
+  location: string,
+  locationEs?: string, 
   address: string, 
   mapUrl: string
 }
@@ -22,12 +23,13 @@ interface ItinerarySectionProps {
 const itnSections: ItinerarySectionProps[] = [
   {
     enTitle: "ICEBREAKER",
-    esTitle: "ROMPEHELIOS",
+    esTitle: "ROMPEHIELIOS",
     date: "Friday, Semptember 1, 2023",
     meetingPoints: [
       {
-        timeRange: "~6:00pm - 10:00pm",
+        timeRange: "6:00pm - 10:00pm",
         location: "Location to be determined",
+        locationEs: "Lugar por determinar",
         mapUrl: "https://maps.google.com",
         address: "Address to be provided"
       }
@@ -42,13 +44,15 @@ const itnSections: ItinerarySectionProps[] = [
     meetingPoints: [
       {
         timeRange: "3:00pm",
-        location: "Buses depart / Transportación sale de hoteles",
+        location: "Buses depart",
+        locationEs: "Transportación sale de hoteles",
         mapUrl: "https://maps.google.com",
         address: "Address to be provided"
       },
       {
         timeRange: "4:00pm",
         location: "Ceremony begins at Oblate School Chapel",
+        locationEs: "Ceremonia comienza en capilla de la escuala Oblate",
         mapUrl: "https://maps.google.com",
         address: "5700 Blanco Rd, San Antonio, TX 78216"
       }
@@ -75,6 +79,7 @@ const itnSections: ItinerarySectionProps[] = [
 
 interface DressCodeSectionProps {
   title: string, 
+  titleEs: string,
   label: string, 
   description: string
 }
@@ -82,11 +87,13 @@ interface DressCodeSectionProps {
 const dressCodeSections: DressCodeSectionProps[] = [
   {
     title: "ICEBREAKER",
+    titleEs: "ROMPEHIELOS",
     label: "Casual/Semi-formal",
     description: "Casual summer evening attire. "
   },
   {
     title: "CEREMONY & RECEPTION",
+    titleEs: "CEREMONIA Y RECEPCIÓN",
     label: "Formal",
     description: "Long dresses and suits. "
   }
@@ -105,12 +112,12 @@ export default function Itinerary() {
           <Navbar tabname={NavItems.itinerary.name} />
           <div className="flex flex-col items-center">
             <div className='flex flex-col justify-center items-center lg:p-8 w-full'>
-                <h2>Itinerary</h2>
+                <h2 className='text-gray-700 mt-4 lg:mt-0'>Itinerary / <span className='italic'>Itinerario</span></h2>
                 {itnSections.map(sections =>  ItinerarySection(sections))}
                 <hr className='w-[95%] mt-8 border-t-2 border-solid border-[#D3D3D3]'/>
             </div>
             <div className='flex flex-col justify-center items-center px-4 pt-4 pb-16'>
-              <h2 className='mb-3'>Dress Code</h2>
+            <h2 className='text-gray-700 mb-3'>Dress Code / <span className='italic'>Vestimenta</span></h2>
               {dressCodeSections.map(section => DressCodeSection(section))}
             </div>
           </div>
@@ -121,8 +128,11 @@ export default function Itinerary() {
 
 const ItinerarySection = ({enTitle, esTitle, date, meetingPoints, color, iconPath}: ItinerarySectionProps) => {
   return (
-    <div className={`flex flex-col ${color} justify-center items-center mt-8 py-8 w-full lg:w-[95%]`}>
-      <h5 className='text-gray-800'><img className="inline mr-3" src={iconPath}/>{enTitle} <span className='italic'>/ {esTitle}</span></h5>
+    <div className={`flex flex-col ${color} justify-center items-start lg:items-center px-4 lg:px-0 mt-8 py-8 w-full lg:w-[95%]`}>
+      <div className='flex flex-col lg:flex-row'>
+        <img className="w-6 mb-2 lg:mb-0" src={iconPath}/>
+        <h5 className='text-gray-800'>{enTitle} <span className='italic'>/ {esTitle}</span></h5>
+      </div>
       <h4 className='small mt-8 text-gray-800'>{date}</h4>
       <>{meetingPoints.map(point => MeetingPoint(point))}</>
     </div>
@@ -130,11 +140,15 @@ const ItinerarySection = ({enTitle, esTitle, date, meetingPoints, color, iconPat
 }  
 
 const MeetingPoint = (point: IteneraryMeetingPoint) => {
-const {timeRange, location, address, mapUrl} = point
+const {timeRange, location, locationEs, address, mapUrl} = point
           return (
-            <div className='flex flex-col justify-center items-center my-3'>
-              <p className='p2 mt-2'><span className='text-gray-800'>{timeRange}</span> <span className='mx-3'>|</span><span className='text-gray-600'>{location}</span></p>
-              <div className='flex flex-col lg:flex-row justify-center items-center'>
+            <div className='flex flex-col justify-center lg:items-center my-3'>
+              <p className='text-gray-800 p2 font-extrabold'>{timeRange}</p> 
+              <p className='p2 mt-2'>
+                <span className='text-gray-600'>{location}</span>
+                {locationEs ? <span className='text-gray-600'> / <span className=' italic'> {locationEs}</span></span> : <></>}
+              </p>
+              <div className='flex flex-col lg:flex-row justify-center lg:items-center'>
                 <p className='p3 mt-2'>{address}</p>
                 <Link href={mapUrl} target="_blank" className='ml-2 link'>View Map</Link>
               </div>
@@ -142,11 +156,11 @@ const {timeRange, location, address, mapUrl} = point
           )
 }
 
-const DressCodeSection = ({title, label, description}: DressCodeSectionProps) =>
+const DressCodeSection = ({title, titleEs, label, description}: DressCodeSectionProps) =>
   <div className='flex flex-col justify-center items-center my-4'>
-    <h5>{title}</h5>
+    <h5 className='text-gray-800'>{title} / <span className='italic'>{titleEs}</span></h5>
     <div className='flex flex-col lg:flex-row justify-center items-center my-4'>
-      <p><strong>{label}</strong></p>
+      <p className='mr-2 text-gray-700'><strong>{label}</strong></p>
       <p>{description}</p>
     </div>
   </div>
