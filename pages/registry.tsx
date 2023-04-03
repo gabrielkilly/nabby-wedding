@@ -13,10 +13,31 @@ export default function Registry() {
       </Head>
       <main>
           <Navbar tabname={NavItems.registry.name} />
-          <div className='flex w-[100vw] h-[100vh] justify-center items-center'>
-            <h2>Coming Soon</h2>
+          <div className='flex flex-col justify-center px-16 gap-y-8 w-full'>
+            <h2 className='mt-8'>Registry</h2>
+            <p>Most of all, we’re excited to celebrate with you! If you’re able to and would like to gift us anything, you can contribute to our Honeymoon and Homegoods fund below!</p>
+            <p className='italic'>!Lo que mas nos emociona es poder celebrar contigo! Pero si nos quieres dejar un detalle, puedes contribuír a nuestro fondo de luna de miel o nuestro fondo de artículos para nuestro hogar.</p>
           </div>
       </main>
     </>
+  )
+}
+
+
+interface FundProps {
+  title: string, 
+  imagePath: string
+  fundPercentage: number,
+  ctaPath: string
+}
+
+const Fund = ({title, imagePath, fundPercentage, ctaPath}: FundProps) => {
+  return (
+    <div className='w-24 flex flex-col justify-center'>
+      <h5 className='text-[#3F3F3F]'>{title}</h5>
+      <img className='w-full h-auto' src={imagePath}/>
+      <a href={ctaPath} className="btn">Contribute</a>
+      
+    </div>
   )
 }
