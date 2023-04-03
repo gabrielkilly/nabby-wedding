@@ -68,7 +68,7 @@ export default function Navbar({tabname}: NavbarProps) {
                         { Object.values(NavItems).map(item => 
                             {
                                 if (item.isCta) {
-                                    return <Link href={item.url}><li key={item.name} className="bg-moss-400 py-2 px-8 rounded"><h5 className="text-white">{item.name}</h5></li></Link>
+                                    return <Link href={item.url} key={item.name}><li className="bg-moss-400 py-2 px-8 rounded"><h5 className="text-white">{item.name}</h5></li></Link>
                                 } else if(item.name === tabname) {
                                     return <li key={item.name} className="bg-moss-100 py-1 px-2 rounded"><Link href={item.url}><h5 className="text-moss-600">{item.name}</h5></Link></li>
                                 } else {
