@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar, { NavItems } from '../components/Navbar'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface TravelSectionProps {
   enTitle: string
@@ -36,7 +37,9 @@ export default function Travel() {
         <Navbar tabname={NavItems.travel.name}/>
           <div className="flex-auto">
             <div className="flex flex-col lg:flex-row h-full lg:w-[1/2]">
-              <div className="block lg:hidden w-full h-52 md:h-96 bg-[url('/travel/travel-bg-2.png')] bg-cover bg-no-repeat bg-top"/> 
+              <div className="block lg:hidden w-full h-52 md:h-96 overflow-hidden relative">
+                  <Image fill src='/index-main.png' alt="Gabby and Nayeli Photo" className='object-cover object-top'/>
+              </div>
               <div className="flex flex-col px-8 lg:px-16 lg:w-1/2 gap-12 pb-12">
                 <h2 className='mt-8 text-center lg:text-left'>Travel & Hotels</h2>
                 <TravelSection enTitle='FLIGHT' esTitle='VIAJE'>
@@ -65,9 +68,15 @@ export default function Travel() {
                 </TravelSection>
               </div>
               <div className="hidden lg:flex flex-col justify-center items-center w-1/2"> 
-                <div className="flex flex-col justify-center items-center h-[33.33%] w-full bg-[url('/travel/travel-bg-1.png')] bg-cover bg-no-repeat bg-top"/> 
-                <div className="flex flex-col justify-center items-center h-[33.33%] w-full bg-[url('/travel/travel-bg-2.png')] bg-cover bg-no-repeat bg-top"/> 
-                <div className="flex flex-col justify-center items-center h-[33.33%] w-full bg-[url('/travel/travel-bg-3.png')] bg-cover bg-no-repeat bg-top"/> 
+                <div className="relative overflow-hidden w-full h-[33.33%]">
+                  <Image fill src='/travel/travel-bg-1.png' alt="Gabby and Nayeli Photo 1" className='object-cover object-top'/>
+                </div>
+                <div className="relative overflow-hidden w-full h-[33.33%]">
+                  <Image fill src='/travel/travel-bg-2.png' alt="Gabby and Nayeli Photo 2" className='object-cover object-top'/>
+                </div>
+                <div className="relative overflow-hidden w-full h-[33.33%]">
+                  <Image fill src='/travel/travel-bg-3.png' alt="Gabby and Nayeli Photo 3" className='object-cover object-top'/>
+                </div>
               </div>
             </div>
           </div>
