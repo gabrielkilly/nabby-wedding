@@ -38,7 +38,12 @@ export default function Travel() {
           <div className="flex-auto">
             <div className="flex flex-col lg:flex-row h-full lg:w-[1/2]">
               <div className="block lg:hidden w-full h-52 md:h-96 overflow-hidden relative">
-                  <Image fill src='/index-main.png' alt="Gabby and Nayeli Photo" className='object-cover object-top'/>
+                  <Image 
+                    fill 
+                    src='/travel/.png' 
+                    alt="Gabby and Nayeli Photo" 
+                    className='object-cover object-top'
+                    />
               </div>
               <div className="flex flex-col px-8 lg:px-16 lg:w-1/2 gap-12 pb-12">
                 <h2 className='mt-8 text-center lg:text-left'>Travel & Hotels</h2>
@@ -69,13 +74,31 @@ export default function Travel() {
               </div>
               <div className="hidden lg:flex flex-col justify-center items-center w-1/2"> 
                 <div className="relative overflow-hidden w-full h-[33.33%]">
-                  <Image fill src='/travel/travel-bg-1.png' alt="Gabby and Nayeli Photo 1" className='object-cover object-top'/>
+                  <Image 
+                    fill 
+                    src='/travel/travel1.png' 
+                    blurDataURL='/travel/travel1-blur.png' 
+                    alt="Gabby and Nayeli Photo 1" 
+                    className='object-cover object-top'
+                  />
                 </div>
                 <div className="relative overflow-hidden w-full h-[33.33%]">
-                  <Image fill src='/travel/travel-bg-2.png' alt="Gabby and Nayeli Photo 2" className='object-cover object-top'/>
+                  <Image 
+                    fill 
+                    src='/travel/travel2.png' 
+                    blurDataURL='/travel/travel2-blur.png' 
+                    alt="Gabby and Nayeli Photo 2" 
+                    className='object-cover object-center'
+                    />
                 </div>
                 <div className="relative overflow-hidden w-full h-[33.33%]">
-                  <Image fill src='/travel/travel-bg-3.png' alt="Gabby and Nayeli Photo 3" className='object-cover object-top'/>
+                  <Image 
+                    fill 
+                    src='/travel/travel3.png' 
+                    blurDataURL='/travel/travel3-blur.png' 
+                    alt="Gabby and Nayeli Photo 3" 
+                    className='object-cover object-top'
+                    />
                 </div>
               </div>
             </div>

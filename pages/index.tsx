@@ -26,7 +26,13 @@ export default function Home() {
             <div className="flex h-full w-full justify-center lg:w-[1/2]">
               <div className="flex flex-col justify-evenly lg:justify-center gap-8 lg:gap-16 2xl:gap-32 items-center lg:w-1/2">
                 <div className="block lg:hidden w-full h-52 md:h-96 overflow-hidden relative">
-                  <Image fill src='/index-main.png' alt="Gabby and Nayeli Photo" className='object-cover object-top'/>
+                  <Image 
+                    fill 
+                    src='/home/home-mobile.png' 
+                    blurDataURL='/home/home-mobile-blur.png'
+                    alt="Gabby and Nayeli Photo" 
+                    className='object-cover object-top'
+                    />
                 </div>
                 <div className="flex flex-col max-w-xl px-4 text-center justify-center items-center space-y-8">
                   <h2 className="lg:hidden text-center text-indigo-600">Gabby & Nayeli</h2>
@@ -46,7 +52,13 @@ export default function Home() {
                 </div>
               </div>
               <div className="hidden lg:block relative overflow-hidden w-1/2">
-                <Image fill src='/index-main.png' alt="Gabby and Nayeli Photo" className='object-cover object-top'/>
+                <Image 
+                  fill 
+                  src='/home/home.png' 
+                  blurDataURL='/home/home-blur.png'
+                  alt="Gabby and Nayeli Photo" 
+                  className='object-cover object-top'
+                />
               </div>
             </div>
           </div>
