@@ -39,9 +39,9 @@ export default function Navbar({tabname}: NavbarProps) {
                             const activeStyling = (item.name == tabname) ? "bg-moss-100 text-moss-600" : ""
 
                             if (item.isCta) {
-                                return <li key={item.name} className="font-extrabold text-xl my-4 ml-8 py-2 px-4 bg-moss-400 rounded text-white"><Link href={item.url}>{item.name}</Link></li>
+                                return <Link key={item.name} href={item.url}><li className="font-extrabold text-xl my-4 ml-8 py-2 px-4 bg-moss-400 rounded text-white">{item.name}</li></Link>
                             } else {
-                                return <li key={item.name} className={`w-full font-extrabold text-xl text-indigo-500 py-4 px-8 ${activeStyling}`}><Link href={item.url}>{item.name}</Link></li>
+                                return <Link key={item.name} className="w-full" href={item.url}><li className={`w-full font-extrabold text-xl text-indigo-500 py-4 px-8 ${activeStyling}`}>{item.name}</li></Link>
                             }
                     
                         }
