@@ -19,7 +19,7 @@ export const NavItems = {
     },
     rsvp: {
         name: "RSVP",
-        url: "https://gabrielandnayeliwedding.rsvpify.com/rsvp-page-preview/328677?signature=7c81646fb19621db1d2a79a49f1c31771c039764f81e3063b83ab65807acd061",
+        url: "https://gabrielandnayeliwedding.rsvpify.com",
         isCta: true
     }
 }
