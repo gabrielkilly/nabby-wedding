@@ -28,6 +28,7 @@ export default function Home() {
                 <div className="block lg:hidden w-full h-52 md:h-96 overflow-hidden relative">
                   <Image 
                     fill 
+                    placeholder='blur'
                     src='/home/home-mobile.png' 
                     blurDataURL='/home/home-mobile-blur.png'
                     alt="Gabby and Nayeli Photo" 
@@ -54,6 +55,7 @@ export default function Home() {
               <div className="hidden lg:block relative overflow-hidden w-1/2">
                 <Image 
                   fill 
+                  placeholder='blur'
                   src='/home/home.png' 
                   blurDataURL='/home/home-blur.png'
                   alt="Gabby and Nayeli Photo" 

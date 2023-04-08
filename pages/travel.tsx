@@ -40,7 +40,9 @@ export default function Travel() {
               <div className="block lg:hidden w-full h-52 md:h-96 overflow-hidden relative">
                   <Image 
                     fill 
-                    src='/travel/.png' 
+                    placeholder='blur'
+                    src='/travel/travel2.png' 
+                    blurDataURL='/travel/travel2-blur.png' 
                     alt="Gabby and Nayeli Photo" 
                     className='object-cover object-top'
                     />
@@ -76,6 +78,7 @@ export default function Travel() {
                 <div className="relative overflow-hidden w-full h-[33.33%]">
                   <Image 
                     fill 
+                    placeholder='blur'
                     src='/travel/travel1.png' 
                     blurDataURL='/travel/travel1-blur.png' 
                     alt="Gabby and Nayeli Photo 1" 
@@ -85,6 +88,7 @@ export default function Travel() {
                 <div className="relative overflow-hidden w-full h-[33.33%]">
                   <Image 
                     fill 
+                    placeholder='blur'
                     src='/travel/travel2.png' 
                     blurDataURL='/travel/travel2-blur.png' 
                     alt="Gabby and Nayeli Photo 2" 
@@ -94,6 +98,7 @@ export default function Travel() {
                 <div className="relative overflow-hidden w-full h-[33.33%]">
                   <Image 
                     fill 
+                    placeholder='blur'
                     src='/travel/travel3.png' 
                     blurDataURL='/travel/travel3-blur.png' 
                     alt="Gabby and Nayeli Photo 3" 
