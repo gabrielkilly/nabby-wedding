@@ -44,7 +44,7 @@ export default function Travel() {
                     src='/travel/travel2.png' 
                     blurDataURL='/travel/travel2-blur.png' 
                     alt="Gabby and Nayeli Photo" 
-                    className='object-cover object-top'
+                    className='object-cover object-center'
                     />
               </div>
               <div className="flex flex-col px-8 lg:px-16 lg:w-1/2 gap-12 pb-12">
