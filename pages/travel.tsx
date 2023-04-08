@@ -48,7 +48,7 @@ export default function Travel() {
                     />
               </div>
               <div className="flex flex-col px-8 lg:px-16 lg:w-1/2 gap-12 pb-12">
-                <h2 className='mt-8 text-center lg:text-left'>Travel & Hotels</h2>
+                <h2 className='mt-8 text-left'>Travel & Hotels</h2>
                 <TravelSection enTitle='FLIGHT' esTitle='VIAJE'>
                   <h4 className='small'>San Antonio International Airport (SAT)</h4>
                   <Description>
@@ -59,6 +59,12 @@ export default function Travel() {
                   </Description>
                 </TravelSection>
                 <TravelSection enTitle='HOTELS' esTitle='HOSPEDAJE'>
+                  <Description>
+                    Our guests will get a discounted rate at the Hotel Valencia. Use the button below to book a room with our discounted rate.
+                  </Description>
+                  <Description italic>
+                    Nuestro hotel sede es el Hotel Valencia. Utiliza el enlace debajo para reservar tu  habitación con nuestra tarifa descontada.
+                  </Description>
                   <HotelSection
                     title='Hotel Valencia Riverwalk'
                     address='150 E Houston St, San Antonio, TX 78205'
@@ -128,11 +134,11 @@ const TravelSection = ({esTitle, enTitle, noBorder, children}: TravelSectionProp
 
 const HotelSection = ({title, address, phone, ctaUrl}: HotelSectionProps) => {
   return (
-    <div className='flex flex-col gap-1'>
+    <div className='flex flex-col gap-1 mt-2'>
       <h4 className='small'>{title}</h4>
       <p>{address}</p>
       <p>{phone}</p>
-      <Link href={ctaUrl} target="_blank" className="w-max border-2 border-indigo-500 bg-[#EDECF2] text-indigo-500 px-4 py-2 mt-2">View Rooms</Link>
+      <Link href={ctaUrl} target="_blank" className="w-max border-2 border-indigo-500 bg-[#EDECF2] text-indigo-500 px-4 py-2 mt-4">View Rooms</Link>
     </div>
   )
 }

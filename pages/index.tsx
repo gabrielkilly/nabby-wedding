@@ -48,7 +48,7 @@ export default function Home() {
                     <h4 className='small text-center p1'>September 1-2, 2023</h4>
                   </div>
                   <a href={NavItems.rsvp.url}><button className="mt-8 primary"><h4 className="text-white">RSVP</h4></button></a>
-                  <p className='text-gray-700 p3 mt-4 mb-1 lg:mb-0'>Please RSVP by July 15, 2023</p>
+                  <p className='text-gray-700 p3 mt-4 mb-1 lg:mb-0'>Please RSVP by July 31, 2023</p>
                   <p className='text-gray-700 italic p3 text-center'>Favor de confirmar antes del 15 de julio 2023</p>
                 </div>
               </div>

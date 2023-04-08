@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Navbar, { NavItems } from '../components/Navbar'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -14,6 +14,7 @@ interface IteneraryMeetingPoint {
 interface ItinerarySectionProps {
   enTitle: string, 
   esTitle: string, 
+  description?: ReactNode,
   date: string, 
   meetingPoints: IteneraryMeetingPoint[]
   color: string, 
@@ -24,6 +25,7 @@ const itnSections: ItinerarySectionProps[] = [
   {
     enTitle: "ICEBREAKER",
     esTitle: "ROMPEHIELIOS",
+    description: <p className='mt-4 px-0 lg:px-32 text-left lg:text-center'>Join us as we kick off the weekend with a a happy hour downtown! / <span className='italic'>¡Acompáñanos en una happy hour para inaugurar el fin de semana!</span></p>,
     date: "Friday, Semptember 1, 2023",
     meetingPoints: [
       {
@@ -110,12 +112,12 @@ export default function Itinerary() {
           <Navbar tabname={NavItems.itinerary.name} />
           <div className="flex flex-col items-center">
             <div className='flex flex-col justify-center items-center lg:p-8 w-full'>
-                <h2 className='text-center text-gray-700 my-8 lg:my-0'>Itinerary / <span className='italic'>Itinerario</span></h2>
-                {itnSections.map(sections =>  ItinerarySection(sections))}
-                <hr className='hidden lg:block w-[95%] mt-8 border-t-2 border-solid border-[#D3D3D3]'/>
+              <h2 className='text-center text-gray-700 my-8 lg:my-0'>Itinerary / <span className='italic'>Itinerario</span></h2>
+              {itnSections.map(sections =>  ItinerarySection(sections))}
+              <hr className='hidden lg:block w-[95%] mt-8 border-t-2 border-solid border-[#D3D3D3]'/>
             </div>
             <div className='flex flex-col justify-center items-center px-4 pt-4 pb-4'>
-              <h2 className='text-center text-gray-700 mb-3'>Dress Code / <span className='italic'>Vestimenta</span></h2>
+              <h2 className='text-left lg:text-center text-gray-700 mb-3'>Dress Code / <span className='italic'>Vestimenta</span></h2>
               {dressCodeSections.map(section => DressCodeSection(section))}
             </div>
           </div>
@@ -124,13 +126,14 @@ export default function Itinerary() {
   )
 }
 
-const ItinerarySection = ({enTitle, esTitle, date, meetingPoints, color, iconPath}: ItinerarySectionProps) => {
+const ItinerarySection = ({enTitle, esTitle, description, date, meetingPoints, color, iconPath}: ItinerarySectionProps) => {
   return (
     <div className={`flex flex-col ${color} justify-center items-start lg:items-center px-4 lg:px-0 lg:mt-8 py-8 w-full lg:w-[95%]`}>
       <div className='flex flex-col lg:flex-row'>
         <img className="w-6 mb-2 lg:mb-0 mr-3" src={iconPath}/>
         <h5 className='text-gray-800'>{enTitle} <span className='italic'>/ {esTitle}</span></h5>
       </div>
+      {description}
       <h4 className='small mt-6 text-gray-800'>{date}</h4>
       <>{meetingPoints.map(point => MeetingPoint(point))}</>
     </div>
@@ -155,9 +158,9 @@ const {timeRange, location, locationEs, address, mapUrl} = point
 }
 
 const DressCodeSection = ({title, titleEs, label, description}: DressCodeSectionProps) =>
-  <div className='flex flex-col justify-center items-center my-4'>
-    <h5 className='text-gray-800 text-center'>{title} / <span className='italic'>{titleEs}</span></h5>
-    <div className='flex flex-col lg:flex-row justify-center items-center my-4'>
+  <div className='flex flex-col justify-center items-start lg:items-center my-4 w-full'>
+    <h5 className='text-gray-800 text-left lg:text-center'>{title} / <span className='italic'>{titleEs}</span></h5>
+    <div className='flex flex-col lg:flex-row justify-center lg:items-center my-4'>
       <p className='mr-2 text-gray-700'><strong>{label}</strong></p>
       <p>{description}</p>
     </div>
