@@ -50,8 +50,6 @@ export default function Navbar({tabname}: NavbarProps) {
             </nav>
         ) :<></>
 
-    const navIcon = showShowMobileMenu ? "/close.png" : "/menu.png"
-
     return (
         <>
         <div className="flex-initial w-100 bg-white border-b-2 border-sky-300">
@@ -77,7 +75,8 @@ export default function Navbar({tabname}: NavbarProps) {
                             }
                         ) }
                     </ul>
-                    <img src={navIcon} className="lg:hidden w-8" onClick={() => setShowMobileMenu(!showShowMobileMenu)}></img>
+                    <img src='/close.svg' className={`${showShowMobileMenu ? '' : 'hidden'} lg:hidden w-8`} onClick={() => setShowMobileMenu(!showShowMobileMenu)}/>
+                    <img src='/menu.svg' className={`${showShowMobileMenu ? 'hidden' : ''} lg:hidden w-8`} onClick={() => setShowMobileMenu(!showShowMobileMenu)}/>
                 </nav>
             </div>
             { mobileNavSection }
