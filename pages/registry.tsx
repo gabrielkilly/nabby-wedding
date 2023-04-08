@@ -17,7 +17,7 @@ export default function Registry() {
             <h2 className='mt-8'>Registry</h2>
             <p>Most of all, we’re excited to celebrate with you! If you’re able to and would like to gift us anything, you can contribute to our Honeymoon and Homegoods fund below!</p>
             <p className='italic'>!Lo que mas nos emociona es poder celebrar contigo! Pero si nos quieres dejar un detalle, puedes contribuír a nuestro fondo de luna de miel o nuestro fondo de artículos para nuestro hogar.</p>
-            <div className='flex'>
+            <div className='flex justify-between mt-8'>
               {funds.map(fund => Fund(fund))}
             </div>
           </div>
@@ -51,8 +51,8 @@ const funds: Array<FundProps> = [
 
 const Fund = ({title, imagePath, fundPercentage, ctaPath}: FundProps) => {
   return (
-    <div key={title} className='w-1/3 flex flex-col justify-between items-between'>
-      <h5 className='text-[#3F3F3F]'>{title}</h5>
+    <div key={title} className='w-[48%] flex flex-col rounded bg-white'>
+      <h5 className='text-[#3F3F3F] px-4 py-3'>{title}</h5>
       <img className='w-full h-auto' src={imagePath}/>
       <a href={ctaPath} className="btn">Contribute</a>
       <p className='w-full'>{fundPercentage}% Funded</p>
