@@ -48,7 +48,7 @@ export default function Travel() {
                     />
               </div>
               <div className="flex flex-col px-8 lg:px-16 lg:w-1/2 gap-12 pb-12">
-                <h2 className='mt-8 text-left'>Travel & Hotels</h2>
+                <h2 className='mt-8 text-left text-gray-700'>Travel & Hotels / <span className='italic'>Viaje y Hospedaje</span></h2>
                 <TravelSection enTitle='FLIGHT' esTitle='VIAJE'>
                   <h4 className='small'>San Antonio International Airport (SAT)</h4>
                   <Description>
