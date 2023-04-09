@@ -17,6 +17,11 @@ export const NavItems = {
         url: "/registry",
         isCta: false
     },
+    contact: {
+        name: "CONTACT",
+        url: "/contact",
+        isCta: false
+    },
     rsvp: {
         name: "RSVP",
         url: "https://gabrielandnayeliwedding.rsvpify.com",
