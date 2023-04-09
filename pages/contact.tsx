@@ -18,7 +18,7 @@ export default function Contact() {
           <div className='flex flex-col justify-center px-8 lg:px-16 gap-y-8 w-full mb-8'>
             <h2 className='mt-8'>Contact / <span className='italic'>Contacto</span></h2>
             <p className='p2'>Please contact us if you have any questions or concerns about the wedding, website, or RSVP form.</p>
-            <p className='p2 italic'>No dudes en contactarnos si tienes alguna pregunta o preocupación en cuanto a la boda, este sitio webm, o la forma de RSVP.</p>
+            <p className='p2 italic'>No dudes en contactarnos si tienes alguna pregunta o preocupación en cuanto a la boda, este sitio web, o la forma de RSVP.</p>
             <ContactSection
                 name='Gabriel Killy'
                 email='gabykilly@gmail.com'
