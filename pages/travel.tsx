@@ -138,7 +138,7 @@ const HotelSection = ({title, address, phone, ctaUrl}: HotelSectionProps) => {
       <h4 className='small'>{title}</h4>
       <p>{address}</p>
       <p>{phone}</p>
-      <Link href={ctaUrl} target="_blank" className="w-max border-2 border-indigo-500 bg-[#EDECF2] text-indigo-500 px-4 py-2 mt-4">View Rooms</Link>
+      <Link href={ctaUrl} target="_blank" className="w-max border-2 border-indigo-500 bg-[#EDECF2] text-indigo-500 px-4 py-2 mt-4 rounded">View Rooms</Link>
     </div>
   )
 }
