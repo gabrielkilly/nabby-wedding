@@ -49,6 +49,25 @@ export default function Travel() {
               </div>
               <div className="flex flex-col px-8 lg:px-16 lg:w-1/2 gap-12 pb-12">
                 <h2 className='mt-8 text-left text-gray-700'>Travel & Hotels / <span className='italic'>Viaje y Hospedaje</span></h2>
+                <TravelSection enTitle='HOTELS' esTitle='HOSPEDAJE'>
+                  <Description>
+                    Our guests will get a discounted rate at the <strong>Hotel Valencia.</strong> Use the button below to book a room.
+                  </Description>
+                  <Description>
+                    If you have any difficulties with online booking, please call the hotel directly to make your reservation. Mention the Perez Killy wedding to ensure you get the right rate!
+                  </Description>
+                  <Description italic>
+                    Nuestro hotel sede es el <strong>Hotel Valencia.</strong> Utiliza el botón para reservar tu habitación con nuestra tarifa de descuento. 
+                  </Description>
+                  <Description italic>
+                    Si tienes cualquier problema con el sitio web del hotel, será mejor llamar por teléfono para hacer tu reservación. ¡No olvides mencionar que es la boda Perez Killy!
+                  </Description>
+                  <HotelSection
+                    title='Hotel Valencia Riverwalk'
+                    address='150 E Houston St, San Antonio, TX 78205'
+                    phone='+1 (855) 596-3387'
+                    ctaUrl='https://hotelvalencia.windsurfercrs.com/ibe/details.aspx?propertyid=14484&nights=2&checkin=09/01/2023&group=PKWB359'/>
+                </TravelSection>
                 <TravelSection enTitle='FLIGHT' esTitle='VIAJE'>
                   <h4 className='small'>San Antonio International Airport (SAT)</h4>
                   <Description>
@@ -57,19 +76,6 @@ export default function Travel() {
                   <Description italic>
                     El Aeropuerto Internacional de San Antonio está a solo 15 minutos en carro del centro de San Antonio. Recomendamos llegar a este aeropuerto y tomar un Uber o Lyft a su hotel/alojamiento.
                   </Description>
-                </TravelSection>
-                <TravelSection enTitle='HOTELS' esTitle='HOSPEDAJE'>
-                  <Description>
-                    Our guests will get a discounted rate at the Hotel Valencia. Use the button below to book a room with our discounted rate.
-                  </Description>
-                  <Description italic>
-                    Nuestro hotel sede es el Hotel Valencia. Utiliza el enlace debajo para reservar tu  habitación con nuestra tarifa descontada.
-                  </Description>
-                  <HotelSection
-                    title='Hotel Valencia Riverwalk'
-                    address='150 E Houston St, San Antonio, TX 78205'
-                    phone='+1 (855) 596-3387'
-                    ctaUrl='https://hotelvalencia.windsurfercrs.com/ibe/details.aspx?propertyid=14484&nights=2&checkin=09/01/2023&group=PKWB359'/>
                 </TravelSection>
                 <TravelSection enTitle='SHUTTLES' esTitle='TRANSPORTACIÓN' noBorder>
                   <Description>

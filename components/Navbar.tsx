@@ -8,7 +8,7 @@ export const NavItems = {
         isCta: false
     },
     travel: {
-        name: "TRAVEL & HOTELS",
+        name: "TRAVEL & HOTEL",
         url: "/travel",
         isCta: false
     },

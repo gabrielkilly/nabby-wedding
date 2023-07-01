@@ -25,11 +25,11 @@ const itnSections: ItinerarySectionProps[] = [
   {
     enTitle: "ICEBREAKER",
     esTitle: "ROMPEHIELIOS",
-    description: <p className='mt-4 px-0 lg:px-32 text-left lg:text-center'>Join us as we kick off the weekend with a a happy hour downtown! / <span className='italic'>¡Acompáñanos en una happy hour para inaugurar el fin de semana!</span></p>,
+    description: <p className='mt-4 px-0 lg:px-32 text-left lg:text-center'>Join us as we kick off the weekend with a a happy hour downtown! / <span className='italic'>¡Acompáñanos en una happy hour para empezar a celebrar!</span></p>,
     date: "Friday, Semptember 1, 2023",
     meetingPoints: [
       {
-        timeRange: "6:00pm - 10:00pm",
+        timeRange: "7:00pm - 10:00pm",
         location: "Location to be determined",
         locationEs: "Lugar por determinar",
         address: "Address to be provided"
@@ -45,19 +45,20 @@ const itnSections: ItinerarySectionProps[] = [
     meetingPoints: [
       {
         timeRange: "3:00pm",
-        location: "Buses depart",
-        locationEs: "Transportación sale de hoteles",
-        address: "Address to be provided"
+        location: "Buses depart Hotel Valencia",
+        locationEs: "Transportación sale de Hote Valencia",
+        mapUrl: "https://goo.gl/maps/EzVsDuwEdXxNZh9Z6",
+        address: "150 E Houston St, San Antonio, TX 78205"
       },
       {
         timeRange: "4:00pm",
-        location: "Ceremony begins at Oblate School Chapel",
-        locationEs: "Ceremonia comienza en capilla de la escuala Oblate",
-        mapUrl: "https://goo.gl/maps/hjTsRqxqPRhA3zJX9",
-        address: "5700 Blanco Rd, San Antonio, TX 78216"
+        location: "Mass at Immaculate Conception Chapel",
+        locationEs: "Misa en la Capilla de la Inmaculada Concepción",
+        mapUrl: "https://goo.gl/maps/JSYbmgJcTdx3GarU7",
+        address: "285 Oblate Dr, San Antonio, TX 78216"
       }
     ],
-    color: "bg-[#D8DCD0]",
+    color: "bg-[#EFF4E3]",
     iconPath: "/itinerary/ceremony-icon.svg"
   },
   {
