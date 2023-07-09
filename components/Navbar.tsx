@@ -14,7 +14,7 @@ export const NavItems = {
     },
     registry: {
         name: "REGISTRY",
-        url: "https://withjoy.com/gabriel-and-nayeli/registry",
+        url: "/registry",
         isCta: false
     },
     contact: {
