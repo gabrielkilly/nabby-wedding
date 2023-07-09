@@ -14,7 +14,7 @@ export const NavItems = {
     },
     registry: {
         name: "REGISTRY",
-        url: "/registry",
+        url: "https://withjoy.com/gabriel-and-nayeli/registry",
         isCta: false
     },
     contact: {
@@ -44,9 +44,9 @@ export default function Navbar({tabname}: NavbarProps) {
                             const activeStyling = (item.name == tabname) ? "bg-moss-100 text-moss-600" : ""
 
                             if (item.isCta) {
-                                return <Link key={item.name} href={item.url}><li className="font-extrabold text-xl my-4 ml-8 py-2 px-4 bg-moss-400 rounded text-white">{item.name}</li></Link>
+                                return <Link key={item.name} href={item.url} target="_blank"><li className="font-extrabold text-xl my-4 ml-8 py-2 px-4 bg-moss-400 rounded text-white">{item.name}</li></Link>
                             } else {
-                                return <Link key={item.name} className="w-full" href={item.url}><li className={`w-full font-extrabold text-xl text-indigo-500 py-4 px-8 ${activeStyling}`}>{item.name}</li></Link>
+                                return <Link key={item.name} className="w-full" href={item.url} target="_blank"><li className={`w-full font-extrabold text-xl text-indigo-500 py-4 px-8 ${activeStyling}`}>{item.name}</li></Link>
                             }
                     
                         }
@@ -71,11 +71,11 @@ export default function Navbar({tabname}: NavbarProps) {
                         { Object.values(NavItems).map(item => 
                             {
                                 if (item.isCta) {
-                                    return <Link href={item.url} key={item.name}><li className="bg-moss-400 py-2 px-8 rounded"><h5 className="text-white">{item.name}</h5></li></Link>
+                                    return <Link href={item.url} key={item.name} target="_blank"><li className="bg-moss-400 py-2 px-8 rounded"><h5 className="text-white">{item.name}</h5></li></Link>
                                 } else if(item.name === tabname) {
-                                    return <li key={item.name} className="bg-moss-100 py-1 px-2 rounded"><Link href={item.url}><h5 className="text-moss-600">{item.name}</h5></Link></li>
+                                    return <li key={item.name} className="bg-moss-100 py-1 px-2 rounded"><Link href={item.url} target="_blank"><h5 className="text-moss-600">{item.name}</h5></Link></li>
                                 } else {
-                                    return <li key={item.name}><Link href={item.url}><h5>{item.name}</h5></Link></li>
+                                    return <li key={item.name}><Link href={item.url} target="_blank"><h5>{item.name}</h5></Link></li>
                                 }
                             }
                         ) }
