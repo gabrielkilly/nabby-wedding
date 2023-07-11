@@ -14,7 +14,7 @@ export const NavItems = {
     },
     registry: {
         name: "REGISTRY",
-        url: "https://www.zola.comhttps://www.zola.com/registry/gabrielandnayeli",
+        url: "https://www.zola.com/registry/gabrielandnayeli",
         isCta: false
     },
     contact: {
