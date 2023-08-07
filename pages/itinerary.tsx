@@ -30,9 +30,9 @@ const itnSections: ItinerarySectionProps[] = [
     meetingPoints: [
       {
         timeRange: "7:00pm - 10:00pm",
-        location: "Location to be determined",
-        locationEs: "Lugar por determinar",
-        address: "Address to be provided"
+        location: "Liberty Bar",
+        mapUrl: "https://goo.gl/maps/Gtua4yxeBbZJM1Vd9",
+        address: "1111 S Alamo St, San Antonio, TX 78210"
       }
     ],
     color: "bg-gold-200",
