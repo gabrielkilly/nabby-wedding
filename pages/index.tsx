@@ -36,9 +36,9 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col max-w-xl px-4 text-center justify-center items-center space-y-8">
                   <h2 className="lg:hidden text-center text-indigo-600">Gabby & Nayeli</h2>
-                  <p className="p1 text-center">We’re getting married! And we are so excited for you to celebrate with us, in just <strong>{daysUntilWedding()} days!</strong></p>
+                  <p className="p1 text-center">Thank you for making our event so special!</p>
                   <hr className="w-20 border-moss-300 border-t-1 border-b-2 rounded"/>
-                  <p className="p1 text-center italic">¡Nos vamos a casar! Con muchísima emoción, te esperamos en <strong>{daysUntilWedding()} días!</strong></p>
+                  <p className="p1 text-center italic">Gracias por hacer nuestro evento tan especial!</p>
                 </div>
                 <div className="flex flex-col justify-around items-center bg-[#D8DCD0] rounded py-8 px-12 lg:py-16 lg:px-28 mx-4 lg:mx-0 mb-4 lg:mb-8 ">
                   <div className="flex flex-col justify-center items-center">
@@ -46,9 +46,7 @@ export default function Home() {
                     <h3 className='text-center'>San Antonio, TX</h3>
                     <h4 className='small text-center p1'>September 1-2, 2023</h4>
                   </div>
-                  <a href={NavItems.rsvp.url}><button className="mt-8 primary"><h4 className="text-white">RSVP</h4></button></a>
-                  <p className='text-gray-700 p3 mt-4 mb-1 lg:mb-0'>Please RSVP by July 31, 2023</p>
-                  <p className='text-gray-700 italic p3 text-center'>Favor de confirmar antes del 31 de julio 2023</p>
+                  <a href={NavItems.registry.url}><button className="mt-8 primary"><h4 className="text-white">Registry</h4></button></a>
                 </div>
               </div>
               <div className="hidden lg:block relative overflow-hidden w-1/2">

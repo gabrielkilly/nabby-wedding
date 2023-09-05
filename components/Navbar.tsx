@@ -2,29 +2,9 @@ import React, { useState } from "react";
 import Link from 'next/link'
 
 export const NavItems = {
-    itinerary: {
-        name: "ITINERARY",
-        url: "/itinerary",
-        isCta: false
-    },
-    travel: {
-        name: "TRAVEL & HOTEL",
-        url: "/travel",
-        isCta: false
-    },
     registry: {
         name: "REGISTRY",
         url: "https://www.zola.com/registry/gabrielandnayeli",
-        isCta: false
-    },
-    contact: {
-        name: "CONTACT",
-        url: "/contact",
-        isCta: false
-    },
-    rsvp: {
-        name: "RSVP",
-        url: "https://gabrielandnayeliwedding.rsvpify.com",
         isCta: true
     }
 }
