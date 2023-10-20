@@ -7,7 +7,7 @@ export default function Home() {
   const daysUntilWedding = () => {
     const today = new Date()
     const weddingDate = new Date("09/02/2023")
-    const timeDiff = weddingDate.getTime() - today.getTime()
+    const timeDiff = weddingDate.getTime() < today.getTime() ? 0 : weddingDate.getTime() - today.getTime()
     return Math.ceil(timeDiff / (1000 * 3600 * 24))
   }
 
