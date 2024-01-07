@@ -1,0 +1,22 @@
+Current amount: ca 
+PTO hours per pay period: hppp
+Goal date: gd
+Next paycheck date: npd
+Time frame: diffOWorkdDays(gd, npd) 
+
+Hours off during time frame: 16
+
+Hours worked: Time frame - Hours off
+
+
+PTO hours per pay period is 6% of hours worked 
+
+
+Goal date
+Next pay check date 
+Planned time off
+
+Hours worked: diffOWorkdDays(goal date, next pay check date) - Planned time off
+
+
+(Hours worked * 0.06) + (Current amount - Hours off)
