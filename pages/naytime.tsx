@@ -1,12 +1,12 @@
 
 export default function NayTime() {
 
-    const lastPayCheckDate = "12/05/2023"
-    const goalDate = "08/14/2024"
-    const currentPtoHours = 8
-    const hoursOff = 20
-    const holidays = 6
-    const ptoPercentage = .0635
+    const lastPayCheckDate = "02/01/2024"
+    const goalDate = "06/14/2024"
+    const currentPtoHours = 14.3
+    const hoursOff = 8
+    const holidays = 1
+    const ptoPercentage = .0635 //rate of accruing pto for each hour worked
 
     const timeDiff = new Date(goalDate).getTime() - new Date(lastPayCheckDate).getTime()
     const totalTimeFrameDays =  Math.ceil(timeDiff / (1000 * 60 * 60 * 24))
